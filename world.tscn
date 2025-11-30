@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://bfvfl6q7ojl5k"]
+[gd_scene load_steps=11 format=3 uid="uid://bfvfl6q7ojl5k"]
 
 [ext_resource type="Script" uid="uid://nqjevr1oe0fk" path="res://world.gd" id="1_aqk2v"]
 [ext_resource type="PackedScene" uid="uid://byjfkpmkypwvg" path="res://player/player.tscn" id="2_fj7yv"]
 [ext_resource type="Texture2D" uid="uid://rrexpbudkv" path="res://aseprite/ASEPRITE/Tileset/TILESET.png" id="2_tlwt5"]
 [ext_resource type="PackedScene" uid="uid://h4bnh2vwcxal" path="res://fadetransition.tscn" id="4_036b0"]
+[ext_resource type="PackedScene" uid="uid://cr2mch8dsjny1" path="res://enemy.tscn" id="5_dwbse"]
+[ext_resource type="Script" uid="uid://ggdqmaxc420f" path="res://fall_area.gd" id="6_pkg7o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aqk2v"]
 texture = ExtResource("2_tlwt5")
@@ -54,6 +56,9 @@ sources/2 = SubResource("TileSetAtlasSource_aqk2v")
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_fj7yv"]
 distance = -858.0
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_gbfbk"]
+distance = 73.0
+
 [node name="World" type="Node2D"]
 position = Vector2(3, 2)
 script = ExtResource("1_aqk2v")
@@ -88,3 +93,15 @@ offset_right = 0.0
 offset_bottom = 0.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(1883, 800)
+script = ExtResource("6_pkg7o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("WorldBoundaryShape2D_gbfbk")
+
+[node name="Enemy" parent="." instance=ExtResource("5_dwbse")]
+position = Vector2(1383, -201)
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
