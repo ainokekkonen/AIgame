@@ -1,0 +1,76 @@
+[gd_scene load_steps=7 format=3 uid="uid://bjmfsywajhuxd"]
+
+[ext_resource type="Texture2D" uid="uid://6byldfcl0n1i" path="res://aseprite/ASEPRITE/healthbar/Untitled_Artwork (6).png" id="1_ik0qw"]
+[ext_resource type="Texture2D" uid="uid://dp6w515c04ftj" path="res://aseprite/ASEPRITE/healthbar/Untitled_Artwork (17).png" id="2_lsuk6"]
+[ext_resource type="Texture2D" uid="uid://dvnuwm47uwhk" path="res://aseprite/ASEPRITE/healthbar/Untitled_Artwork (16).png" id="3_3ppec"]
+[ext_resource type="Texture2D" uid="uid://vgga2e1n1ylr" path="res://aseprite/ASEPRITE/healthbar/Untitled_Artwork (14).png" id="4_b812u"]
+[ext_resource type="Texture2D" uid="uid://colb1l3nf43p3" path="res://aseprite/ASEPRITE/healthbar/Untitled_Artwork (13).png" id="5_em5qd"]
+[ext_resource type="Texture2D" uid="uid://djnopurv70283" path="res://aseprite/ASEPRITE/healthbar/Untitled_Artwork (12).png" id="6_rli15"]
+
+[node name="Parallax2D" type="Parallax2D"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.1, 0.1)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
+texture_repeat = 2
+position = Vector2(-224, -251)
+scale = Vector2(3.375, 3.375)
+texture = ExtResource("1_ik0qw")
+region_enabled = true
+region_rect = Rect2(0, 0, 4000, 1080)
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer2"]
+texture_repeat = 2
+position = Vector2(-224, -251)
+scale = Vector2(3.375, 3.375)
+texture = ExtResource("2_lsuk6")
+region_enabled = true
+region_rect = Rect2(0, 0, 4000, 1080)
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer3"]
+texture_repeat = 2
+position = Vector2(-224, -251)
+scale = Vector2(3.375, 3.375)
+texture = ExtResource("3_3ppec")
+region_enabled = true
+region_rect = Rect2(0, 0, 4000, 1080)
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer4"]
+texture_repeat = 2
+position = Vector2(-224, -251)
+scale = Vector2(3.375, 3.375)
+texture = ExtResource("4_b812u")
+region_enabled = true
+region_rect = Rect2(0, 0, 4000, 1080)
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer5"]
+texture_repeat = 2
+position = Vector2(-224, -251)
+scale = Vector2(3.375, 3.375)
+texture = ExtResource("5_em5qd")
+region_enabled = true
+region_rect = Rect2(0, 0, 4000, 1080)
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer6"]
+texture_repeat = 2
+position = Vector2(-224, -251)
+scale = Vector2(6, 6)
+texture = ExtResource("6_rli15")
+region_enabled = true
+region_rect = Rect2(0, 0, 5000, 1080)

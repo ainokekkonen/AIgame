@@ -220,7 +220,7 @@ shape = SubResource("CircleShape2D_l0tg3")
 autostart = true
 
 [node name="Dialogue" parent="." instance=ExtResource("5_mcvl2")]
-offset_left = -176.0
-offset_top = 30.0
-offset_right = 309.0
-offset_bottom = 319.0
+offset_left = -309.0
+offset_top = 7.0
+offset_right = 282.0
+offset_bottom = 296.0

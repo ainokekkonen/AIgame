@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://c6dj34ys6d83g"]
+[gd_scene load_steps=3 format=3 uid="uid://c6dj34ys6d83g"]
 
 [ext_resource type="Texture2D" uid="uid://cpyh57oh33hr3" path="res://aseprite/ASEPRITE/dialoguebox-export.png" id="1_1ei20"]
+[ext_resource type="FontFile" uid="uid://cwn66fpautar3" path="res://aseprite/MedodicaRegular.otf" id="2_je2oo"]
 
 [node name="Dialogue" type="Control"]
 layout_mode = 3
@@ -12,6 +13,18 @@ offset_bottom = 40.0
 layout_mode = 0
 offset_left = -71.0
 offset_top = -234.0
-offset_right = 427.0
-offset_bottom = 357.0
+offset_right = 668.0
+offset_bottom = 431.0
 texture = ExtResource("1_1ei20")
+
+[node name="Name" type="RichTextLabel" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 167.0
+offset_top = 316.0
+offset_right = 616.0
+offset_bottom = 356.0
+theme_override_colors/default_color = Color(0, 0.47394264, 0.4739427, 1)
+theme_override_colors/font_selected_color = Color(0.0957719, 0.541634, 0.53416145, 0)
+theme_override_fonts/normal_font = ExtResource("2_je2oo")
+theme_override_font_sizes/normal_font_size = 24
+fit_content = true

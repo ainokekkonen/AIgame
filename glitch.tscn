@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://dcawgstd56i7m"]
+
+[ext_resource type="Texture2D" uid="uid://c70bvindq5oy5" path="res://aseprite/ASEPRITE/Glitch/Glitch.png" id="1_pmn76"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f62fx"]
+atlas = ExtResource("1_pmn76")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n1aqk"]
+atlas = ExtResource("1_pmn76")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e3b7u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f62fx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n1aqk")
+}],
+"loop": true,
+"name": &"move",
+"speed": 40.0
+}]
+
+[node name="glitch" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(21.5, 17)
+scale = Vector2(1.671875, 1.53125)
+sprite_frames = SubResource("SpriteFrames_e3b7u")
+animation = &"move"
+frame = 1
+frame_progress = 0.97045374

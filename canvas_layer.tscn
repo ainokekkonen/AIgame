@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgbu50bcup703"]
+
+[ext_resource type="Texture2D" uid="uid://bcgprdcfx7ior" path="res://aseprite/ASEPRITE/healthbar/healthbar frame.png" id="1_tg4cr"]
+[ext_resource type="Texture2D" uid="uid://dw7r784ay3ot3" path="res://aseprite/ASEPRITE/healthbar/healthbar full.png" id="2_37rai"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Healthbar" type="TextureProgressBar" parent="."]
+offset_left = 59.0
+offset_top = 21.0
+offset_right = 251.0
+offset_bottom = 54.0
+value = 100.0
+texture_under = ExtResource("1_tg4cr")
+texture_over = ExtResource("2_37rai")

@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://fcoidw8ov78i"]
+
+[ext_resource type="Texture2D" uid="uid://buscvmcs6gped" path="res://aseprite/ASEPRITE/BGscreens/screensBG-Recovered.png" id="1_mnjya"]
+
+[sub_resource type="TileSet" id="TileSet_mnjya"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+
+[node name="Screens" type="ParallaxLayer" parent="."]
+position = Vector2(37.035, 552)
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(1980, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Screens"]
+texture = ExtResource("1_mnjya")
+region_enabled = true
+region_rect = Rect2(0, 0, 1920, 1080)
+
+[node name="Tiles" type="ParallaxLayer" parent="."]
+position = Vector2(37.035, 552)
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(1980, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Tiles"]
+texture_repeat = 2
+position = Vector2(30, -15)
+texture = ExtResource("1_mnjya")
+region_enabled = true
+region_rect = Rect2(-2.529, 1076.887, 1980, 1080)
+
+[node name="Wires" type="ParallaxLayer" parent="."]
+position = Vector2(37.035, 552)
+motion_mirroring = Vector2(1980, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wires"]
+texture = ExtResource("1_mnjya")
+region_enabled = true
+region_rect = Rect2(2.641, 2156.969, 1980, 1080)
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(37.035, 552)
+tile_set = SubResource("TileSet_mnjya")
+format = 2

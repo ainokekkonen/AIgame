@@ -51,3 +51,38 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+
+func _process(delta):
+	var player = get_node("Player")
+	if player:
+		position = player.position
+
+
+
+signal health_changed(new_health)
+
+@export var max_health: int = 100
+var health: int = max_health
+
+func _ready():
+	emit_signal("health_changed", health) # Lähetetään alkuarvo
+
+func take_damage(amount: int):
+		health = clamp(health - amount, 0, max_health)
+		emit_signal("health_changed", health)
+
+func heal(amount: int):
+		health = clamp(health + amount, 0, max_health)
+		emit_signal("health_changed", health)
+
+
+func _on_enemy_hit():
+		take_damage(10)
+
+
+func _input(event):
+		if event.is_action_pressed("damage"):
+			take_damage(10)
+		if event.is_action_pressed("heal"):
+			heal(10)

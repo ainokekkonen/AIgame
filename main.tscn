@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://6f3c4qu33jv6"]
+[gd_scene load_steps=40 format=3 uid="uid://6f3c4qu33jv6"]
 
 [ext_resource type="Script" uid="uid://cpo5u81a17fmc" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://bh0642ndy0r7h" path="res://aseprite/ASEPRITE/exitreal1.png" id="2_1bvp3"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://cqyjnkl46jmoj" path="res://aseprite/ASEPRITE/backgroundanms/BACKGROUNDMENU3.png" id="36_cyx1q"]
 [ext_resource type="PackedScene" uid="uid://h4bnh2vwcxal" path="res://fadetransition.tscn" id="36_ok6jj"]
 [ext_resource type="Texture2D" uid="uid://dxfvf0d44uyd2" path="res://aseprite/ASEPRITE/backgroundanms/BACKGROUNDMENU4.png" id="37_0dhbp"]
+[ext_resource type="PackedScene" uid="uid://dgbu50bcup703" path="res://canvas_layer.tscn" id="37_b1qrp"]
+[ext_resource type="PackedScene" uid="uid://bjmfsywajhuxd" path="res://parallax_2d.tscn" id="38_come4"]
 [ext_resource type="Texture2D" uid="uid://mrey0jgtgpk8" path="res://aseprite/ASEPRITE/backgroundanms/BACKGROUNDMENU5.png" id="38_jx0wj"]
 [ext_resource type="Texture2D" uid="uid://de2it8rau51fe" path="res://aseprite/ASEPRITE/backgroundanms/BACKGROUNDMENU6.png" id="39_kkkcx"]
 [ext_resource type="Texture2D" uid="uid://dvyf533ysnkh8" path="res://aseprite/ASEPRITE/backgroundanms/BACKGROUNDMENU7.png" id="40_34ol3"]
@@ -193,6 +195,12 @@ texture_normal = ExtResource("3_lquwl")
 visible = false
 
 [node name="Fade_timer" type="Timer" parent="Fade_transition"]
+
+[node name="CanvasLayer" parent="." instance=ExtResource("37_b1qrp")]
+visible = false
+
+[node name="Parallax2D" parent="." instance=ExtResource("38_come4")]
+visible = false
 
 [connection signal="pressed" from="ButtonManager/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="ButtonManager/Exit" to="." method="_on_exit_pressed"]

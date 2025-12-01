@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://xt8g34iilisr"]
+
+[ext_resource type="FontFile" uid="uid://cwn66fpautar3" path="res://aseprite/MedodicaRegular.otf" id="1_nwcfo"]
+[ext_resource type="Texture2D" uid="uid://d24q1ilcbxfpb" path="res://aseprite/ASEPRITE/button.png" id="2_05uyy"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nwcfo"]
+texture = ExtResource("2_05uyy")
+
+[node name="PauseMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Resume" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.42745098, 0.52156866, 0.64705884, 1)
+theme_override_fonts/font = ExtResource("1_nwcfo")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxTexture_nwcfo")
+text = "Resume"
+flat = true
+alignment = 0
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.42745098, 0.52156866, 0.64705884, 1)
+theme_override_fonts/font = ExtResource("1_nwcfo")
+theme_override_font_sizes/font_size = 54
+text = "Quit"
+flat = true
