@@ -113,7 +113,7 @@ layer_0/tile_data = PackedInt32Array(1966149, 262146, 1, 1900613, 262146, 1, 183
 position = Vector2(170, 181)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(15, -157)
+position = Vector2(31, -66)
 limit_left = -9999081
 limit_top = -9999648
 limit_right = 10000919
@@ -163,17 +163,17 @@ grow_vertical = 0
 [node name="Background" type="NinePatchRect" parent="Cutscene/Dialogue"]
 clip_contents = true
 layout_mode = 0
-offset_left = -11.0
-offset_top = 117.0
-offset_right = 453.0
-offset_bottom = 553.0
+offset_left = -15.0
+offset_top = 156.0
+offset_right = 449.0
+offset_bottom = 592.0
 texture = ExtResource("8_ioo17")
 
 [node name="Label" type="Label" parent="Cutscene/Dialogue/Background"]
 layout_mode = 0
-offset_left = 103.0
+offset_left = 114.0
 offset_top = 206.0
-offset_right = 329.0
+offset_right = 340.0
 offset_bottom = 270.0
 theme_override_colors/font_color = Color(0, 0.80784315, 0.80784315, 1)
 theme_override_fonts/font = ExtResource("8_gbfbk")
